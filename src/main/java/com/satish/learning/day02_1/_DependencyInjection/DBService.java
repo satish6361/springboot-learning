@@ -6,8 +6,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class DBService {
 
-    @Autowired
-    DB db;
+
+    final private DB db;
+
+    public DBService(DB db){
+        this.db = db;
+    }
+
+
     public String getDB(){
         return db.getDB();
     }
