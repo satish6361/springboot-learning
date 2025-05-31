@@ -1,10 +1,11 @@
 package com.satish.learning.day02_1._DependencyInjection;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+@ConditionalOnProperty(name = "deploy.env", havingValue = "development")
 public class DevDB implements DB{
     public String getDB(){
         return "This is Development DB";
