@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class DBService {
 
     @Autowired
-    ProdDB db;
+    DB db;
     public String getDB(){
         return db.getDB();
     }
